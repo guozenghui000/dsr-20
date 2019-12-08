@@ -1,0 +1,22 @@
+mkdir 创建目录
+pwd显示当前路径
+git init 初始化git仓库
+git add file添加文件到暂存区index，可一次添加多个
+git commit -m <message>提交文件到分支（master），  -m文件说明；可以一次提交多个，多次add， 一次commit
+git push 把本地库记录推送到远程库
+git log 显示从最近到最远的提交日志 --pretty=online   Q退出
+git reset版本回退 --hard HEAD^回退到上个版本，^^上两个，~100上一百个
+git reset --hard <commitid>
+git reflog 查看记录的每一条命令
+
+工作区和暂存区
+learngit文件夹是一个工作区。
+.git隐藏文件是一个版本库
+版本库中有一个stage（index）暂存区，第一个分支master，指向master的指针HEAD
+git status 查看状态
+git diff HEAD -- learngit01 查看工作区和版本库最新版本的区别
+git checkout -- learngit01 工作区中的learngit01返回到上一次add或者commit状态
+git reset HEAD learngit01 将暂存区的修改退回到工作区
+
+删除文件
+git rm 删除工作区一个文件
