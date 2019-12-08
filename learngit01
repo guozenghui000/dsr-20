@@ -32,3 +32,36 @@ origin意思是远程库，也可自己命名
 git push -u origin master ;初始推送，如果有不相干的历史记录需要先拉到本地库再推
 git push origin master ;将当前分支master推送到远程
 git pull origin master 将远程库的东西拉到本地库参数 --allow-unrelated-histories（如果有不相干的历史记录可用这个）
+master是主分支，要时刻与远程分支保持同步
+dev是开发分支，也要同步
+bug分支只用于本地修复bug
+feature分支是否推送取决是否合作开发
+远程库克隆
+先创建远程库gitclone
+git clone git@github.com:HeCunGuo/gitclone.git
+其中地址也可以用https://github.com/HeCunGuo/gitclone.git，不过推送需要口令而且慢
+git switch -c dev创建并切换到dev分支
+git branch 查看分支信息
+git add  ；git commit -m message  ；提交到dev分支
+git switch master 切回master分支
+git merge dev 将dev分支合并到当前分支
+git branch -d dev 删除分支dev
+
+git stash 保存工作现场
+git stash list
+git stash apply 恢复现场
+git stash pop 恢复现场并删除stash中内容
+git branch -D <name>强行删除一个没被合并的分支
+git remote 查看远程库信息
+git rebase 整理成直线分支
+
+
+标签管理
+tag 与commitid相绑定
+git tag v1.0在当前分支创建标签
+git tag 查看所有标签信息
+git tag v0.9 commitid 对以前版本打标签
+标签按字母排序
+git show v1.0 查看标签信息
+git -a v1.0 -m "打标签" commitid 对某版本打标签并写说明
+
