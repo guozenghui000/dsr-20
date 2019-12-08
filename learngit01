@@ -20,3 +20,13 @@ git reset HEAD learngit01 将暂存区的修改退回到工作区
 
 删除文件
 git rm 删除工作区一个文件
+
+远程仓库
+ssh-keygen -t rsa -C "2038852203@qq.com" 生成自己的公私钥
+复制公钥内容到GitHub/Accounting Settings/SSH Keys;title任意填
+GitHub创建同名仓库
+git remote add origin git@github.com:HeCunGuo/learngit.git；添加远程仓库
+origin意思是远程库，也可自己命名
+git push -u origin master ;初始推送，如果有不相干的历史记录需要先拉到本地库再推
+git push origin master ;将当前分支master推送到远程
+git pull origin master 将远程库的东西拉到本地库参数 --allow-unrelated-histories（如果有不相干的历史记录可用这个）
