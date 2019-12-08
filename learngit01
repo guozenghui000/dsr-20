@@ -20,6 +20,8 @@ git reset HEAD learngit01 将暂存区的修改退回到工作区
 
 删除文件
 git rm 删除工作区一个文件
+git rm -r --cached readme 删除缓存区的文件
+提交推上去可以删除远程区的文件
 
 远程仓库
 ssh-keygen -t rsa -C "2038852203@qq.com" 生成自己的公私钥
