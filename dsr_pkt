@@ -1,0 +1,25 @@
+dsr_pkt解析
+
+1.定义六个成员变量
+源地址src
+目的地址dst
+下一跳nxt_hop
+前一跳prv_hop
+标志位flags
+打捞salvage
+
+2.ifdef如果是网络模拟NS2则定义：
+联合体 hdr_mac
+头IP结构体
+头ip联合体
+
+否则定义：
+联合体以太网头
+联合体IP头
+
+3.定义结构体，其中包含联合体（选项头部），一个tail指针，一个end指针
+定义int型及结构体型的响应数量，请求数量，ack数量等
+定义int型的净负荷
+
+4.ifdef模拟网络
+定义指向appdata型的指针，指向packet型的指针
